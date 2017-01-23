@@ -14,23 +14,23 @@ app.get('/', function(req, res){
 });
 
 app.post('/add', function (req, res) {
-  var num = number(req.body.firstNum) + number(req.body.secNum);
+  var num = Number(req.body.firstNum) + Number(req.body.secNum);
   res.send({num});
   console.log(num);
 });
 
 app.post('/sub', function (req, res) {
-  var num = number(req.body.firstNum) - number(req.body.secNum);
+  var num = Number(req.body.firstNum) - Number(req.body.secNum);
   res.send({num});
 });
 
 app.post('/mul', function (req, res) {
-  var num = number(req.body.firstNum) * number(req.body.secNum);
+  var num = Number(req.body.firstNum) * Number(req.body.secNum);
   res.send({num});
 });
 
 app.post('/div', function (req, res) {
-  var num = number(req.body.firstNum) / number(req.body.secNum);
+  var num = Number(req.body.firstNum) / Number(req.body.secNum);
   res.send({num});
 });
 
